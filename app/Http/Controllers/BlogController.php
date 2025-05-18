@@ -51,10 +51,10 @@ class BlogController extends Controller
 
         $post->update($validated);
 
-        return "
+        return response("
         const message = 'Пост успешно обновлен!';
         completeResponse();
-        ";
+        ")->header('Content-Type', 'text/javascript');
     }        
 
     public function create()

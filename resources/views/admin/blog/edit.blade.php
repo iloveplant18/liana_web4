@@ -83,11 +83,12 @@
             const content = document.querySelector("#content").value;
             const script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = `/blog/${postId}?title=${title}&content=${content}`;
+            script.src = `/admin/blog/${postId}?title=${title}&content=${content}`;
             document.body.append(script);
         }
 
         function completeResponse() {
+            console.log("response completed");
             const messageContainer = document.querySelector("#message-container");
             messageContainer.textContent = message;
         }
